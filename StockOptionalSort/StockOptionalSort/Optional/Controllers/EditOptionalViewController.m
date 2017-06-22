@@ -148,7 +148,7 @@
 
 #pragma mark - 删除自选事件
 - (void)deleteAction {
-    //注意：界面上是支持多只股票删除的，同样服务器端也需要支持，之前采取逐条删除的方式，不过问题颇多：1.删除某一条的时候网络端口/失败；2.在删除第一条后界面要整体向上移动，对应cell的下标会变(当然，这个可以放在循环外执行，最关键的还是服务器某一条删除失败，而你(界面上是一块删除的)界面删除了,而服务器端没有删除);
+    //注意：界面上是支持多只股票删除的，同样服务器端也需要支持
     //1.删除服务器数据(删除成功后再执行下面的操作)
     NSLog(@"成功删除服务器数据");
     //2.删除数据源数据(这里也不能使用循环删除的方式，因为删除操作会引起数组容量的变化，导致数组越界等问题)
@@ -158,8 +158,8 @@
         [indexes addIndex:(NSUInteger)indexPath.row];
     }
     [_optionalList removeObjectsAtIndexes:indexes];
-    //3删除界面
-    [self.tableView reloadData];//刷新tableView后，对应的界面就不需要处理了。没找到一次删除多个不相关tableView的方法
+    //3.删除界面
+    [self.tableView reloadData];//刷新tableView后，对应的界面就不需要处理了。没找到一次删除多个cell的方法
     //4.清空删除队列
     [_deleteQueue removeAllObjects];
     //5.改变底部视图的颜色
