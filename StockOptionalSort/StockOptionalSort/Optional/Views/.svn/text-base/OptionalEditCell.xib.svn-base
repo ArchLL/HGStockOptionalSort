@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="OptionalEditCell" rowHeight="46" id="KGk-i7-Jjw" customClass="OptionalEditCell">
+            <rect key="frame" x="0.0" y="0.0" width="389" height="46"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="389" height="45.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平安银行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xaw-Yf-rme">
+                        <rect key="frame" x="10" y="10" width="100" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="7Xn-2x-2cB"/>
+                            <constraint firstAttribute="width" constant="100" id="zeL-6J-jBv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SH600004" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQp-5E-SFa">
+                        <rect key="frame" x="10" y="25" width="100" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="1Le-i1-BmR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.55988579989999998" green="0.56234019989999995" blue="0.58408057690000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDl-z2-Idy">
+                        <rect key="frame" x="276" y="15" width="15" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="CGv-o5-OHt"/>
+                            <constraint firstAttribute="width" constant="15" id="dW1-5T-MQl"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="Optional_stick.png"/>
+                        <connections>
+                            <action selector="buttonClickAaction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nO1-7F-qgK"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yQp-5E-SFa" firstAttribute="width" secondItem="Xaw-Yf-rme" secondAttribute="width" id="F7G-ks-2Uu"/>
+                    <constraint firstItem="yQp-5E-SFa" firstAttribute="centerX" secondItem="Xaw-Yf-rme" secondAttribute="centerX" id="KlZ-w6-kTi"/>
+                    <constraint firstItem="yQp-5E-SFa" firstAttribute="top" secondItem="Xaw-Yf-rme" secondAttribute="bottom" id="N0h-ba-ju4"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="rDl-z2-Idy" secondAttribute="trailing" constant="90" id="O2z-TL-O9q"/>
+                    <constraint firstItem="rDl-z2-Idy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Tzl-y8-WEY"/>
+                    <constraint firstItem="Xaw-Yf-rme" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="YgA-No-Sy1"/>
+                    <constraint firstItem="Xaw-Yf-rme" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="qGG-lv-LI2"/>
+                    <constraint firstItem="yQp-5E-SFa" firstAttribute="leading" secondItem="Xaw-Yf-rme" secondAttribute="leading" id="y8Z-Jp-muB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="stickBtn" destination="rDl-z2-Idy" id="rGp-Bm-G6v"/>
+                <outlet property="stockCode" destination="yQp-5E-SFa" id="YtG-I9-hlY"/>
+                <outlet property="stockName" destination="Xaw-Yf-rme" id="nNo-tt-TiP"/>
+            </connections>
+            <point key="canvasLocation" x="48.5" y="126"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Optional_stick.png" width="32" height="32"/>
+    </resources>
+</document>
