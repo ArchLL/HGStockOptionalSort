@@ -38,15 +38,15 @@
         label.tag = 100 + i;
         label.frame = CGRectMake(i*rightUnitViewWidth, self.contentView.center.y, rightUnitViewWidth, 21);
         [self.contentView addSubview:label];
-        //分割线
-        UIView *line = [[UIView alloc]init];
-        line.backgroundColor = CellSeparator_Color;
-        [self.contentView addSubview:line];
-        [line  mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.bottom.equalTo(self.contentView).offset(0);
-            make.height.mas_equalTo(1);
-        }];
     }
+    //分割线
+    UIView *line = [[UIView alloc]init];
+    line.backgroundColor = CellSeparator_Color;
+    [self.contentView addSubview:line];
+    [line  mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.contentView).offset(0);
+        make.height.mas_equalTo(1);
+    }];
 }
 
 //赋值
