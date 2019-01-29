@@ -1,0 +1,16 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '8.0'
+
+target 'HGStockOptionalSort' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  #数据存储
+  pod 'JQFMDB'
+  #自动化布局
+  pod 'Masonry'
+  #数据解析
+  pod 'MJExtension'
+
+
+end

@@ -1,0 +1,30 @@
+PODS:
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - JQFMDB (1.1.6):
+    - FMDB
+  - Masonry (1.1.0)
+  - MJExtension (3.0.15.1)
+
+DEPENDENCIES:
+  - JQFMDB
+  - Masonry
+  - MJExtension
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FMDB
+    - JQFMDB
+    - Masonry
+    - MJExtension
+
+SPEC CHECKSUMS:
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  JQFMDB: 39ab0d6d7c26fd30e51c4dd92edcb27506a34c3a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+
+PODFILE CHECKSUM: b839d9e888f4dfd9fe4f56211cc6a4e6bee8282d
+
+COCOAPODS: 1.5.3
